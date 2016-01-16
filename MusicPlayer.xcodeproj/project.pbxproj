@@ -15,6 +15,7 @@
 		27DE3F751C4A274E002D3914 /* MusicPlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DE3F741C4A274E002D3914 /* MusicPlayerTests.swift */; };
 		27DE3F801C4A274E002D3914 /* MusicPlayerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DE3F7F1C4A274E002D3914 /* MusicPlayerUITests.swift */; };
 		27DE3F8E1C4A27CF002D3914 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 27DE3F8D1C4A27CF002D3914 /* background.png */; };
+		27DE3F941C4AE250002D3914 /* 01 My Enemy.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 27DE3F931C4AE250002D3914 /* 01 My Enemy.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,9 +50,7 @@
 		27DE3F7F1C4A274E002D3914 /* MusicPlayerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerUITests.swift; sourceTree = "<group>"; };
 		27DE3F811C4A274E002D3914 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		27DE3F8D1C4A27CF002D3914 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
-		27DE3F901C4AD600002D3914 /* 09 Love the Way You Lie (iTunes Session).m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "09 Love the Way You Lie (iTunes Session).m4a"; sourceTree = "<group>"; };
-		27DE3F911C4AD614002D3914 /* 18 Warriors.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "18 Warriors.m4a"; sourceTree = "<group>"; };
-		27DE3F921C4AD621002D3914 /* 03 Gone, Gone, Gone.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "03 Gone, Gone, Gone.m4a"; sourceTree = "<group>"; };
+		27DE3F931C4AE250002D3914 /* 01 My Enemy.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "01 My Enemy.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,9 +134,7 @@
 		27DE3F8F1C4AD5BC002D3914 /* Music Files */ = {
 			isa = PBXGroup;
 			children = (
-				27DE3F901C4AD600002D3914 /* 09 Love the Way You Lie (iTunes Session).m4a */,
-				27DE3F911C4AD614002D3914 /* 18 Warriors.m4a */,
-				27DE3F921C4AD621002D3914 /* 03 Gone, Gone, Gone.m4a */,
+				27DE3F931C4AE250002D3914 /* 01 My Enemy.mp3 */,
 			);
 			name = "Music Files";
 			sourceTree = "<group>";
@@ -247,6 +244,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				27DE3F6A1C4A274E002D3914 /* LaunchScreen.storyboard in Resources */,
+				27DE3F941C4AE250002D3914 /* 01 My Enemy.mp3 in Resources */,
 				27DE3F8E1C4A27CF002D3914 /* background.png in Resources */,
 				27DE3F671C4A274E002D3914 /* Assets.xcassets in Resources */,
 				27DE3F651C4A274E002D3914 /* Main.storyboard in Resources */,
