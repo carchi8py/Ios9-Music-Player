@@ -7,10 +7,24 @@
 //
 
 import UIKit
+import AVFoundation
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, AVAudioPlayerDelegate {
     
     var musicFiles = [String]()
+    
+    var musicPlayer: AVAudioPlayer = AVAudioPlayer()
+    var currentIndex: Int = 0
+    
+    var timer: NSTimer = NSTimer()
+    var timeRemaining: Bool = false
+    
+    @IBOutlet weak var songNameLabel: UILabel!
+    @IBOutlet weak var timeLabel: UILabel!
+    
+    @IBOutlet weak var musicSlider: UISlider!
+    @IBOutlet weak var volumeSlider: UISlider!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +35,10 @@ class ViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return UIStatusBarStyle.LightContent
     }
     
     func loadMusicFiles() {
@@ -43,6 +61,51 @@ class ViewController: UIViewController {
             }
         }
     }
+    func playMusic() {
+        
+    }
+    
+    @IBAction func timeButton(sender: AnyObject) {
+    }
+    
+    func updateSlider() {
+        
+    }
+    
+    func updateTime(currentTime: NSTimeInterval) -> String {
+        return ""
+    }
+    
+    func audioPlayerDidFinishPlaying(player: AVAudioPlayer, successfully flag: Bool) {
+
+    }
+    
+    func animateSongNameLabel() {
+        
+    }
+    
+    // Mark: Buttons
+    
+    @IBAction func back(sender: AnyObject) {
+    }
+    
+    @IBAction func next(sender: AnyObject) {
+    }
+    
+    @IBAction func play(sender: AnyObject) {
+    }
+    @IBAction func pause(sender: AnyObject) {
+    }
+    @IBAction func stop(sender: UIBarButtonItem) {
+    }
+    
+    @IBAction func musicSliderChanged(sender: AnyObject) {
+    }
+    
+    @IBAction func VolumeSliderChanged(sender: AnyObject) {
+    }
+
+    
 }
 extension String {
     var pathExtension: String {

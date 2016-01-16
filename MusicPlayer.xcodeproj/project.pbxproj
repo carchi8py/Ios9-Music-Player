@@ -16,6 +16,7 @@
 		27DE3F801C4A274E002D3914 /* MusicPlayerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DE3F7F1C4A274E002D3914 /* MusicPlayerUITests.swift */; };
 		27DE3F8E1C4A27CF002D3914 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 27DE3F8D1C4A27CF002D3914 /* background.png */; };
 		27DE3F941C4AE250002D3914 /* 01 My Enemy.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 27DE3F931C4AE250002D3914 /* 01 My Enemy.mp3 */; };
+		27DE3F961C4AE2D7002D3914 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27DE3F951C4AE2D7002D3914 /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		27DE3F811C4A274E002D3914 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		27DE3F8D1C4A27CF002D3914 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		27DE3F931C4AE250002D3914 /* 01 My Enemy.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "01 My Enemy.mp3"; sourceTree = "<group>"; };
+		27DE3F951C4AE2D7002D3914 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27DE3F961C4AE2D7002D3914 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +84,7 @@
 		27DE3F531C4A274E002D3914 = {
 			isa = PBXGroup;
 			children = (
+				27DE3F951C4AE2D7002D3914 /* AVFoundation.framework */,
 				27DE3F5E1C4A274E002D3914 /* MusicPlayer */,
 				27DE3F731C4A274E002D3914 /* MusicPlayerTests */,
 				27DE3F7E1C4A274E002D3914 /* MusicPlayerUITests */,

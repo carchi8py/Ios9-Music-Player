@@ -25,8 +25,16 @@
                                 </constraints>
                                 <items>
                                     <navigationItem title="Music Player" id="C7I-8l-Wkr">
-                                        <barButtonItem key="leftBarButtonItem" title="Item" systemItem="rewind" id="Ocm-sv-RiC"/>
-                                        <barButtonItem key="rightBarButtonItem" systemItem="fastForward" id="E8Q-BR-VAq"/>
+                                        <barButtonItem key="leftBarButtonItem" title="Item" systemItem="rewind" id="Ocm-sv-RiC">
+                                            <connections>
+                                                <action selector="back:" destination="BYZ-38-t0r" id="raz-YZ-TC3"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="fastForward" id="E8Q-BR-VAq">
+                                            <connections>
+                                                <action selector="next:" destination="BYZ-38-t0r" id="RKK-Mn-1XJ"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -36,20 +44,38 @@
                                     <constraint firstAttribute="height" constant="44" id="9Qd-AI-lz7"/>
                                 </constraints>
                                 <items>
-                                    <barButtonItem systemItem="play" id="uJ9-Ic-sjN"/>
-                                    <barButtonItem systemItem="pause" id="qfo-gV-o0E"/>
+                                    <barButtonItem systemItem="play" id="uJ9-Ic-sjN">
+                                        <connections>
+                                            <action selector="play:" destination="BYZ-38-t0r" id="JaW-Os-Ave"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem systemItem="pause" id="qfo-gV-o0E">
+                                        <connections>
+                                            <action selector="pause:" destination="BYZ-38-t0r" id="gT2-dl-J53"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="if6-5r-zE0"/>
                                     <barButtonItem style="plain" id="ZZz-zB-ufK">
                                         <slider key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" id="oSS-w4-t88">
                                             <rect key="frame" x="416" y="6.5" width="118" height="31"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </slider>
+                                        <connections>
+                                            <action selector="VolumeSliderChanged:" destination="BYZ-38-t0r" id="wid-KN-iw1"/>
+                                        </connections>
                                     </barButtonItem>
-                                    <barButtonItem title="Stop" id="fpY-OJ-RqV"/>
+                                    <barButtonItem title="Stop" id="fpY-OJ-RqV">
+                                        <connections>
+                                            <action selector="stop:" destination="BYZ-38-t0r" id="E7I-ZF-gLN"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="KBf-YG-Ybp">
                                 <rect key="frame" x="18" y="515" width="564" height="31"/>
+                                <connections>
+                                    <action selector="musicSliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="2nP-d1-Jrx"/>
+                                </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10:00:00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4lJ-Ud-pgT">
                                 <rect key="frame" x="397" y="486" width="183" height="21"/>
@@ -63,6 +89,9 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oIF-UD-hxc">
                                 <rect key="frame" x="352" y="387" width="46" height="30"/>
+                                <connections>
+                                    <action selector="timeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hed-fQ-TAi"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="SbG-xd-68G">
                                 <rect key="frame" x="180" y="137" width="560" height="149"/>
@@ -109,6 +138,12 @@
                             <constraint firstItem="bCK-VS-MFq" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="z8W-NF-OGH"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="musicSlider" destination="KBf-YG-Ybp" id="WCz-is-LVR"/>
+                        <outlet property="songNameLabel" destination="ucq-UU-7d0" id="Xpb-jj-5H6"/>
+                        <outlet property="timeLabel" destination="4lJ-Ud-pgT" id="dfE-f8-78R"/>
+                        <outlet property="volumeSlider" destination="oSS-w4-t88" id="baL-pX-Mxq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
