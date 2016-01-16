@@ -125,22 +125,43 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     // Mark: Buttons
     
     @IBAction func back(sender: AnyObject) {
+        currentIndex -= 1
+        if currentIndex < 0 {
+            currentIndex = musicFiles.count - 1
+        }
+        playMusic()
     }
     
     @IBAction func next(sender: AnyObject) {
+        currentIndex += 1
+        if currentIndex == musicFiles.count {
+            currentIndex = 0
+        }
+        playMusic()
     }
     
     @IBAction func play(sender: AnyObject) {
+        musicPlayer.play()
+        songNameLabel.text = musicFiles[currentIndex]
+        animateSongNameLabel()
     }
     @IBAction func pause(sender: AnyObject) {
+        musicPlayer.pause()
     }
     @IBAction func stop(sender: UIBarButtonItem) {
+        musicPlayer.stop()
+        songNameLabel.text = ""
+        musicPlayer.currentTime = 0
     }
     
     @IBAction func musicSliderChanged(sender: AnyObject) {
+        if musicPlayer.playing {
+            musicPlayer.currentTime = NSTimeInterval(musicSlider.value)
+        }
     }
     
     @IBAction func VolumeSliderChanged(sender: AnyObject) {
+        musicPlayer.volume = volumeSlider.value
     }
 
     
