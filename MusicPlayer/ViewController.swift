@@ -30,6 +30,11 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         super.viewDidLoad()
         
         loadMusicFiles()
+        
+        songNameLabel.text = ""
+        timeLabel.text = "00:00"
+        
+        playMusic()
     }
 
     override func didReceiveMemoryWarning() {
@@ -62,7 +67,23 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         }
     }
     func playMusic() {
-        
+        let filePath = NSString(string: NSBundle.mainBundle().pathForResource(musicFiles[currentIndex], ofType: "mp3")!)
+        let fileURL = NSURL(fileURLWithPath: filePath as String)
+        do {
+            musicPlayer = try AVAudioPlayer(contentsOfURL: fileURL)
+        } catch _ {
+            let alertController = UIAlertController(title: "Error", message: "Unable to load Song", preferredStyle: .Alert)
+            alertController.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
+            self.presentViewController(alertController, animated: true, completion: nil)
+        }
+        musicPlayer.delegate = self
+        musicSlider.minimumValue = 0
+        musicSlider.maximumValue = Float(musicPlayer.duration)
+        musicSlider.value = Float(musicPlayer.currentTime)
+        musicPlayer.volume = volumeSlider.value
+        musicPlayer.play()
+        songNameLabel.text = musicFiles[currentIndex]
+        animateSongNameLabel()
     }
     
     @IBAction func timeButton(sender: AnyObject) {
