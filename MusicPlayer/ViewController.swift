@@ -35,6 +35,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         timeLabel.text = "00:00"
         
         playMusic()
+        timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: Selector("updateSlider"), userInfo: nil, repeats: true)
     }
 
     override func didReceiveMemoryWarning() {
@@ -87,14 +88,30 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     }
     
     @IBAction func timeButton(sender: AnyObject) {
+        timeRemaining = !timeRemaining
     }
     
     func updateSlider() {
-        
+        musicSlider.value = Float(musicPlayer.currentTime)
+        if timeRemaining == false {
+            timeLabel.text = updateTime(musicPlayer.currentTime)
+        } else {
+            timeLabel.text = updateTime(musicPlayer.duration - musicPlayer.currentTime)
+        }
     }
     
     func updateTime(currentTime: NSTimeInterval) -> String {
-        return ""
+        let current: Int = Int(currentTime)
+        let minutes = current / 60
+        let seconds = current % 60
+        
+        let minuteString = minutes > 9 ? "\(minutes)" : "0\(minutes)"
+        let secondsString = seconds > 9 ? "\(seconds)" : "0\(seconds)"
+        if timeRemaining == false {
+            return minuteString + ":" + secondsString
+        } else {
+            return "-" + minuteString + ":" + secondsString
+        }
     }
     
     func audioPlayerDidFinishPlaying(player: AVAudioPlayer, successfully flag: Bool) {
