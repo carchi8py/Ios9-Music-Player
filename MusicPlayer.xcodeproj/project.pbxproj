@@ -49,6 +49,9 @@
 		27DE3F7F1C4A274E002D3914 /* MusicPlayerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerUITests.swift; sourceTree = "<group>"; };
 		27DE3F811C4A274E002D3914 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		27DE3F8D1C4A27CF002D3914 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		27DE3F901C4AD600002D3914 /* 09 Love the Way You Lie (iTunes Session).m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "09 Love the Way You Lie (iTunes Session).m4a"; sourceTree = "<group>"; };
+		27DE3F911C4AD614002D3914 /* 18 Warriors.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "18 Warriors.m4a"; sourceTree = "<group>"; };
+		27DE3F921C4AD621002D3914 /* 03 Gone, Gone, Gone.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "03 Gone, Gone, Gone.m4a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +102,7 @@
 		27DE3F5E1C4A274E002D3914 /* MusicPlayer */ = {
 			isa = PBXGroup;
 			children = (
+				27DE3F8F1C4AD5BC002D3914 /* Music Files */,
 				27DE3F8D1C4A27CF002D3914 /* background.png */,
 				27DE3F5F1C4A274E002D3914 /* AppDelegate.swift */,
 				27DE3F611C4A274E002D3914 /* ViewController.swift */,
@@ -126,6 +130,16 @@
 				27DE3F811C4A274E002D3914 /* Info.plist */,
 			);
 			path = MusicPlayerUITests;
+			sourceTree = "<group>";
+		};
+		27DE3F8F1C4AD5BC002D3914 /* Music Files */ = {
+			isa = PBXGroup;
+			children = (
+				27DE3F901C4AD600002D3914 /* 09 Love the Way You Lie (iTunes Session).m4a */,
+				27DE3F911C4AD614002D3914 /* 18 Warriors.m4a */,
+				27DE3F921C4AD621002D3914 /* 03 Gone, Gone, Gone.m4a */,
+			);
+			name = "Music Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
