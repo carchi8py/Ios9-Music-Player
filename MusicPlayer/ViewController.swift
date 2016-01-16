@@ -115,11 +115,15 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     }
     
     func audioPlayerDidFinishPlaying(player: AVAudioPlayer, successfully flag: Bool) {
-
+        let random = arc4random_uniform(UInt32(musicFiles.count))
+        currentIndex = Int(random)
+        playMusic()
     }
     
     func animateSongNameLabel() {
-        
+        UIView.animateWithDuration(1, delay: 0.5, options: [UIViewAnimationOptions.Repeat, UIViewAnimationOptions.Autoreverse], animations: {
+            self.songNameLabel.alpha = 0
+            }, completion: nil)
     }
     
     // Mark: Buttons
